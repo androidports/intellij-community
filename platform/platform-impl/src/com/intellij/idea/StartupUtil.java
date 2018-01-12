@@ -233,7 +233,9 @@ public class StartupUtil {
         delete(ideTempFile);
       }
       catch (Exception e) {
-        tempInaccessible = e.getClass().getSimpleName() + ": " + e.getMessage();
+        if (!new File("/system/bin/sh").exists()) {
+          tempInaccessible = e.getClass().getSimpleName() + ": " + e.getMessage();
+        }
       }
     }
 
