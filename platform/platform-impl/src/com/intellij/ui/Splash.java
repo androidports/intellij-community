@@ -80,6 +80,7 @@ public class Splash extends JDialog implements StartupProgress {
     contentPane.add(myLabel, BorderLayout.CENTER);
     Dimension size = getPreferredSize();
     setSize(size);
+    setResizable(false); // for Android
     pack();
     setLocationInTheCenterOfScreen();
   }
